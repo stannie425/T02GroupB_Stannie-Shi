@@ -7,3 +7,17 @@
 4. Click an interactive circle to lock or unlock continuous playback.
 5. Drag horizontally (while hovering or locked) to adjust the audio playback rate and rotation speed.
 6. Only Circles 1, 2, and 8 rotate during audio playback; other circles remain static to preserve the visual composition.
+
+## Individual Animation Approach
+For my contribution, I used audio as the driving mechanism. The disc-like circular forms make sound-driven rotation a natural extension of the visual concept.
+
+My approach links:
+- audio playback
+- rate control
+- dynamic filtering
+- rotation
+
+My component establishes a direct connection between sound and motion.
+
+
+
