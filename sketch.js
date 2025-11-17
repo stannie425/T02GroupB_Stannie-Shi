@@ -609,7 +609,7 @@ function mouseMoved(){
 
 //when mouse press
 function mousePressed() {
-   userStartAudio();
+   userStartAudio();//I found that there is a delay then I searched GPT it recommend me to use this to fully unlock the audio context. User need to click anywhere on the canvas to active audio engine.
   if (!audioReady) return;
 
   const id = getCircleIdAt(mouseX, mouseY);
