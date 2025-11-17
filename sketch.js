@@ -609,6 +609,7 @@ function mouseMoved(){
 
 //when mouse press
 function mousePressed() {
+   userStartAudio();
   if (!audioReady) return;
 
   const id = getCircleIdAt(mouseX, mouseY);
