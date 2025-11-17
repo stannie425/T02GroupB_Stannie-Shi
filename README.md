@@ -1,8 +1,8 @@
 # T02GroupB_Stannie-Shi
 
 ## Part1: How to Interact
-1. Click anywhere on the canvas once to activate the audio engine (required for unlocking the Web Audio API via userStartAudio()).
-2. Hover over Circle 1(Purple)/ Circle 2(Orange-Green) / Circle 8(Green Dots) to preview sound.
+1. Click anywhere on the canvas once to activate the audio engine (required for unlocking the Web Audio API via `userStartAudio()`).
+2. Hover over `Circle 1`(Purple)/ `Circle 2`(Orange-Green) / `Circle 8`(Green Dots) to preview sound.
 3. Move the cursor away to stop playback.
 4. Click an interactive circle to lock or unlock continuous playback.
 5. Drag horizontally (while hovering or locked) to adjust the audio playback rate and rotation speed.
@@ -50,20 +50,20 @@ Inspired by vinyl records and DJ turntable performance:
 
 ### Audio System
 - Audio starts only after a user click via userStartAudio().
-- A p5.Filter() node shapes the sound, switching type according to the active circle (1 / 2 / 8).
+- A `p5.Filter()` node shapes the sound, switching type according to the active `circle (1 / 2 / 8)`.
 
 ### Interaction Logic
-- getCircleIdAt() handles hit detection for the three interactive circles.
+- `getCircleIdAt()` handles hit detection for the three interactive circles.
 - Hover → start loop; leave → stop playback.
 - Click toggles a lock for hands-free playback.
-- Drag maps mouse movement to vinylSound.rate(), affecting pitch and rotation speed.
+- Drag maps mouse movement to `vinylSound.rate()`, affecting pitch and rotation speed.
 
 ### Rotation System
-- circleRotation[id] stores rotation angles for the interactive circles only.
-- Angles update during playback; noLoop() ensures the canvas redraws only on state change.
+- `circleRotation[id]` stores rotation angles for the interactive circles only.
+- Angles update during playback; `noLoop()` ensures the canvas redraws only on state change.
 
 ### Rendering Efficiency
-- The sketch uses noLoop() to avoid unnecessary rendering.
+- The sketch uses `noLoop()` to avoid unnecessary rendering.
 - Visual updates occur only when interaction changes (hover, lock, drag, rate).
 
 ## Part6: Modifications to Group Code
@@ -72,7 +72,7 @@ My contributions include:
 - the entire audio system (sound loading, filters, rate control)
 - hover / click / drag interaction logic
 - rotation behaviour for selected circles
-- small update to CircleArt.display() to apply rotation
+- small update to `CircleArt.display()` to apply rotation
 - additional state variables for audio-driven animation
 
 
