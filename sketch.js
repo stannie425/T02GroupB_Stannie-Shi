@@ -593,5 +593,63 @@ function mouseMoved(){
   if(!audioReady || lockedCircleId !== null) return;
   const id = getCircleIdAt(mouseX, mouseY);
   if (id === hoverCircleId) return;
-  
+
+  //when mouse enter circle
+  if (id !== null) {
+    hoverCircleId = id;
+    applyFilterProfile(id);
+    if (!vinylSound.isPlaying()) vinylSound.loop();
+  } 
+  //when mouse leave
+  else {
+    hoverCircleId = null;
+    vinylSound.stop();
+  }
+}
+
+//when mouse press
+function mousePressed() {
+  if (!audioReady) return;
+
+  const id = getCircleIdAt(mouseX, mouseY);
+  if (id === null) return;
+
+  //unlock
+  if (lockedCircleId === id) {
+    lockedCircleId = null;
+    hoverCircleId = null;
+    vinylSound.stop();
+  } else {
+    
+    // lock new circle
+    lockedCircleId = id;
+    hoverCircleId = id;
+    applyFilterProfile(id);
+    if (!vinylSound.isPlaying()) vinylSound.loop();
+  }
+}
+
+//drag to change the rate
+function mouseDragged(){
+  if (!audioReady) return;
+
+  const id = lockedCircleId ?? hoverCircleId;
+  if (!id) return;
+
+  const dx = mouseX - pmouseX;
+
+  // adjust playback rate
+  vinylSound.rate(map(dx, -30, 30, 0.8, 1.2, true));
+
+  // adjust rotation
+  circleRotation[id] += dx * 0.02;
+
+  redraw();
+}
+
+//reset the rate when release
+function mouseReleased() {
+  if (audioReady) {
+    vinylSound.rate(1.0);
+  }
 }
