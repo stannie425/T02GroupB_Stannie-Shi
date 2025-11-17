@@ -19,5 +19,21 @@ My approach links:
 
 My component establishes a direct connection between sound and motion.
 
+## Animated Properties
+
+### Interactive Rotation
+- Circles 1, 2, and 8 rotate when audio plays.
+- Rotation speed matches playback rate, mimicking turntable behaviour.
+
+### Filter-Based Sonic Identity
+Each interactive circle applies a distinct filter:
+- Circle 1 → High-pass filter
+- Circle 2 → Band-pass filter
+- Circle 8 → Low-pass filter
+
+This gives each circle a unique sonic character.
+
+### Static Non-Interactive Circles
+All other circles remain still to preserve the structural balance of the original artwork.
 
 
