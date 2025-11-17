@@ -27,9 +27,9 @@ My component establishes a direct connection between sound and motion.
 
 ### Filter-Based Sonic Identity
 Each interactive circle applies a distinct filter:
-- Circle 1 → High-pass filter
-- Circle 2 → Band-pass filter
-- Circle 8 → Low-pass filter
+- Circle 1 → `High-pass filter`
+- Circle 2 → `Band-pass filter`
+- Circle 8 → `Low-pass filter`
 
 This gives each circle a unique sonic character.
 
@@ -42,6 +42,7 @@ Inspired by vinyl records and DJ turntable performance:
 - pitch shifts when adjusting platter speed
 - tonal shaping similar to DJ EQ filtering
 - hover-trigger playback reminiscent of a stylus touching the record
+
 ![Vinyl](./assets/vinyl%20records.jpg)
 
 
