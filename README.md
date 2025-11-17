@@ -36,4 +36,25 @@ This gives each circle a unique sonic character.
 ### Static Non-Interactive Circles
 All other circles remain still to preserve the structural balance of the original artwork.
 
+## Technical Explanation
+
+### Audio System
+- Audio starts only after a user click via userStartAudio().
+- A p5.Filter() node shapes the sound, switching type according to the active circle (1 / 2 / 8).
+
+### Interaction Logic
+- getCircleIdAt() handles hit detection for the three interactive circles.
+- Hover → start loop; leave → stop playback.
+- Click toggles a lock for hands-free playback.
+- Drag maps mouse movement to vinylSound.rate(), affecting pitch and rotation speed.
+
+### Rotation System
+- circleRotation[id] stores rotation angles for the interactive circles only.
+- Angles update during playback; noLoop() ensures the canvas redraws only on state change.
+
+### Rendering Efficiency
+- The sketch uses noLoop() to avoid unnecessary rendering.
+- Visual updates occur only when interaction changes (hover, lock, drag, rate).
+
+
 
