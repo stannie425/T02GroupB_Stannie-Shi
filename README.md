@@ -36,6 +36,14 @@ This gives each circle a unique sonic character.
 ### Static Non-Interactive Circles
 All other circles remain still to preserve the structural balance of the original artwork.
 
+## Inspiration
+Inspired by vinyl records and DJ turntable performance:
+- continuous rotation during playback
+- pitch shifts when adjusting platter speed
+- tonal shaping similar to DJ EQ filtering
+- hover-trigger playback reminiscent of a stylus touching the record
+
+
 ## Technical Explanation
 
 ### Audio System
@@ -55,6 +63,15 @@ All other circles remain still to preserve the structural balance of the origina
 ### Rendering Efficiency
 - The sketch uses noLoop() to avoid unnecessary rendering.
 - Visual updates occur only when interaction changes (hover, lock, drag, rate).
+
+## Modifications to Group Code
+Visual functions (drawCircle1–8) remain unchanged.
+My contributions include:
+- the entire audio system (sound loading, filters, rate control)
+- hover / click / drag interaction logic
+- rotation behaviour for selected circles
+- small update to CircleArt.display() to apply rotation
+- additional state variables for audio-driven animation
 
 
 
