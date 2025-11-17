@@ -42,6 +42,8 @@ Inspired by vinyl records and DJ turntable performance:
 - pitch shifts when adjusting platter speed
 - tonal shaping similar to DJ EQ filtering
 - hover-trigger playback reminiscent of a stylus touching the record
+![vinyl](T02GroupB_Stannie-Shi/vinyl records.jpg)
+
 
 
 ## Technical Explanation
